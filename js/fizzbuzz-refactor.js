@@ -31,18 +31,18 @@ function validateInput(inputNumber) {
     //at least 1 characters
     while (inputNumber.length < 1) {
         var inputNumber = prompt("Please enter 1 digit or more.");
-        userInputCorrectFlag = false; //is this line of code to exit the loop?
+        userInputCorrectFlag = false;
     }
     //no space
     while (inputNumber.indexOf(' ') > 0) {
         var inputNumber = prompt("Please don't enter spaces. Try a number!");
-        userInputCorrectFlag = false; //is this line of code to exit the loop?
+        userInputCorrectFlag = false;
     }
     //the limit is a number (if the rounded value of your number (Math.floor)) is the same witht he initial number (inputNumber)
     while (Math.floor(inputNumber) != inputNumber) {
         var inputNumber = prompt("Your upper limit was not a nmber. Set it again")
             //change the user input flag to false
-        userInputCorrectFlag = false; //is this line of code to exit the loop?
+        userInputCorrectFlag = false;
     }
 
     //PART 3 => if the limit is valid, then play the game
